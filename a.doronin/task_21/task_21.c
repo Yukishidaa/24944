@@ -7,6 +7,7 @@ int beep_count = 0;
 
 void sigint_handler(int sig)
 {
+    signal(SIGINT, sigint_handler);
     beep_count++;
     printf("\r\aBEEP! \n");
     fflush(stdout);
