@@ -67,7 +67,7 @@ void print_file_info(const char *filename)
     }
     else
     {
-        printf("%8s ", "");
+        printf("%8ld ", (long)st.st_size);
     }
 
     printf("%s %s\n", time_str, basename);
